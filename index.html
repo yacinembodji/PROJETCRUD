@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operations de Gestion avec CRUD </title>
+  <link rel="stylesheet" href="./lib/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./snackbar.css" />
+</head>
+
+<body>
+ 
+  <!-- le formulaire d'inscription -->
+  <div class="page">
+   
+    <!-- block titre -->
+    <div class="page-heading">
+      <span><marquee behavior="" direction="">Gestion Numerique D'un Préscolaire </marquee></span>
+    </div>  <!--   fin block titre -->
+
+    <!-- grand block div pour les blocks les enregistreement et nouvel eleves -->
+    <div class="page-contant">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-heading">
+                  <!-- block enregistrement -->
+                  <span>les Enregistrements</span>
+                </div>
+                <div class="card-content">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom complet</th>
+                        <th scope="col">AGE</th>
+                        <th scope="col">Modifier</th>
+                        <th scope="col">Supprimer</th>
+                      </tr>
+                    </thead>
+                    <tbody id="generatedTableData"></tbody>
+                  </table>
+                </div>
+                <!-- fin block engistrement -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card special-form-card">
+              <!-- block Ajout d'eleve -->
+              <div class="card-body">
+                <div class="card-heading">
+                  <span id="insert-heading">Ajouter Un Nouvel Eleve</span>
+                  <span id="edit-heading">Mise à jour</span>
+                </div>
+                
+                <div class="card-content">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="nameField" placeholder="Entrer Le Nom complet de votre enfant" />
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="ageField" placeholder="Entrer son age" />
+                  </div>
+                  <div class="form-actions">
+                    <button id="insert-btn" type="submit" onclick="createNewRecord()" class="btn btn-success">
+                     Valider
+                    </button>
+                    <button id="edit-btn" type="submit" class="btn btn-info" onclick="updateButtonPress()">
+                     Mise à jour
+                    </button>
+                    <button id="edit-cnl-btn" type="submit" class="btn btn-danger margin-left-2x"
+                      onclick="updateCancelButton()">
+                      Annuler
+                    </button>
+                  </div>
+                  <!-- fin block ajout d'eleve -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="snackbar"></div>
+  
+  <!-- partie suppression -->
+  <div class="modal fade" id="deleteModalCenter" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLongTitle">Supprimer l'enregistrement</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Etes vous sure de vouloir supprimer ces données.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" id="deleteModelBtn">
+            OUI
+          </button>
+          <button id="deleteCnlModelBtn" type="button" class="btn btn-secondary" data-dismiss="modal">
+           Annuler
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- fin partie supression-->
+  <script src="./lib/jquery.min.js"></script>
+  <script src="./lib/popper.min.js"></script>
+  <script src="./lib/bootstrap.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>

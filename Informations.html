@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: yellowgreen;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color:green;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:black;
+        }
+        .container p{
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 15px;
+        }
+        .container a{
+            text-decoration: none;
+            color: white;
+            border: 2px solid green;
+            border-radius: 5px;
+            background-color: green;
+            font-size: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>informations Supplementaires</h2>
+        <p>donnez nous plus d'information concernant votre enfant</p>
+        <form action="#" method="post">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+    <a href="index.html" >Envoyer</a>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+

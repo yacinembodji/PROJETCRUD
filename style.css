@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f8f8;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 20px 25px; 
+
+}
+/* stylisation de l'entête principal */
+
+.page a{
+  text-decoration: none;
+  color: black;
+  margin: 0px;
+  font-size: 20px;
+}
+.page a:hover{
+  color: yellowgreen;
+}
+.page .page-heading {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: yellowgreen;
+}
+/* stylisation contant */
+.page .page-contant {
+  width: 100%;
+  background-color:yellowgreen
+}
+
+.page .page-contant .card {
+  margin-top: 2px;
+  height: 100%;
+  background-color:yellowgreen
+}
+
+.page .page-contant .card .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  
+}
+/* stylisation des titre de block */
+.page .page-contant .card .card-body .card-heading {
+  font-size: 22px;
+  line-height: 0.5;
+  font-weight: 600;
+  color: #6f6767;
+  margin-bottom: 20px;
+}
+
+.special-form-card {
+  max-height: 227px !important;
+}
+
+.form-actions {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.margin-left-2x {
+  margin-left: 15px;
+}
